@@ -45,33 +45,63 @@
 
 
 
-function fetchUsers()
-{
-    let x = fetch("https://jsonplaceholder.typicode.com/users");
-    // console.log(x);
+// function fetchUsers()
+// {
+//     let x = fetch("https://jsonplaceholder.typicode.com/users");
+//     // console.log(x);
 
-    x.then((response)=>{
-        return response.json().then(data=>{
-            console.log(data);
-            let store = document.getElementById("store");
-            data.map((user)=>{
-                store.innerHTML +=`
-                <tr>
-                <td>${user.id}</td>
-                <td>${user.name}</td>
-                <td>${user.email}</td>
-                <td>${user.company.name}</td>
+//     x.then((response)=>{
+//         return response.json().then(data=>{
+//             console.log(data);
+//             let store = document.getElementById("store");
+//             data.map((user)=>{
+//                 store.innerHTML +=`
+//                 <tr>
+//                 <td>${user.id}</td>
+//                 <td>${user.name}</td>
+//                 <td>${user.email}</td>
+//                 <td>${user.company.name}</td>
 
-                </tr>
-                `
+//                 </tr>
+//                 `
                 
-            })
-        })
-    })
-    .catch(err=>console.log(err))
+//             })
+//         })
+//     })
+//     .catch(err=>console.log(err))
 
-}
-fetchUsers();
+// }
+// fetchUsers();
 
+
+
+//async & await
+
+// let p = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         resolve("Yes it is resolved");
+
+//     }, 5000)
+// })
+
+// async function demo(){
+//     // console.log("Hello");
+//     // console.log("How");
+//     // console.log("Are");
+//     // console.log("You");
+//     console.log("Start");
+//     let x = await p;
+//     console.log(x);
+
+
+// }
+// demo();
+
+// async function fetchUsers(){
+//     let response = await fetch("https://api.github.com/users");
+//     let data = await response.json();
+//     console.log(data);
+// }
+// fetchUsers();
 
 
